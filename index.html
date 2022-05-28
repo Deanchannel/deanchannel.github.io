@@ -10,6 +10,8 @@
    <input id="name" placeholder="Masukan Nama File"><p></p>
    <input id="down" placeholder="Masukan Url File">
    <input id="pw" placeholder="pw">
+<p/>
+<input id="hsl">
  <div style="background:#7237FF;" class="mt-4 text-center text-white btn btn-block" onclick="generate();">Download</div>
   </div>
 </div>
@@ -20,10 +22,12 @@ function generate(){
   var name= document.getElementById('name').value;
   var down= document.getElementById('down').value;
   var v= document.getElementById('pw').value;
-  var asu= window.atob= name;
-  var bab= window.atob= down;
-  var hasil= link + asu + '&l=' + bab + '&v=' + v ;
-  alert (hasil)
+  var asu= window.atob(name);
+  var bab= window.atob(down);
+  var vvv= window.atob(v);
+  var vh = window.atob(vvv);
+  var hasil= link + asu + '&l=' + bab + '&v=' + vh ;
+  document.getElementById('hsl').value;
 }
 </script>
 
@@ -32,7 +36,7 @@ function password() {
 var pass= document.getElementById('pwa').value;
 if (pass == "dEanchannel"){
 document.getElementById('crot').style.display="";document.getElementById('admin').style.display="none";
-}else{document.getElementById('crot').innerHTML='<h1>NGAPAIN TOD?</h1>';
+}else{document.getElementById('admin').innerHTML='<h1>NGAPAIN TOD?</h1>';
  }
 }
 </script>
