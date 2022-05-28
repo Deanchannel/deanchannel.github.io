@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-<div class="text-center bg-white"><input id="pwa" placeholder="masukan password admin"></input></div>
+<div id="admin" class="text-center bg-white"><input id="pwa" placeholder="masukan password admin"></input><button onclick='password()' class="btn btn-success btn-block">Login</button></div>
 
 <div id="crot" style="display:none;height:100%;background:#7237FF; " class="body p-2">
   <div class=" text-center rounded shadow p-4 mt-5 bg-white">
@@ -28,10 +28,12 @@ function generate(){
 </script>
 
 <script>
+function password() {
 var pass= document.getElementById('pwa').value;
 if (pass == "dEanchannel"){
-document.getElementById('crot').style.display="";
+document.getElementById('crot').style.display="";document.getElementById('admin').style.display="none";
 }else{document.getElementById('crot').innerHTML='<h1>NGAPAIN TOD?</h1>';
+ }
 }
 </script>
   
