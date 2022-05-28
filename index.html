@@ -19,20 +19,22 @@
 
 <script>
 function generate(){
-  var link="https://deanchannell.blogspot.com/#?y=";
+  var link="https://deanchannell.blogspot.com/#?h8gdsb=";
+  var url= "&zMxYh=";
+  var ptw= "&gCBbirw="
   var name= document.getElementById('name').value;
   var down= document.getElementById('down').value;
   var vyn= document.getElementById('pwdd').value;
- // INIT
-  var secretKey = "naylaayu";
-  // END
-  var asu= CryptoJS.AES.encrypt(name,secretKey);
-  var bab= CryptoJS.AES.encrypt(down,secretKey);
-  var vxy= CryptoJS.AES.encrypt(vyn,secretKey);
-  var hhss= asu + '&l=' + bab + '&v=' + vxy;
-  var hasil= link + hhss;
-  alert(hasil);
-  var hasill= document.getElementById('hsl').value=hasil;
+  var eName= window.btoa(name);
+  var eDown= window.btoa(down);
+  var ePwdd= window.btoa(vyn);
+  
+  var ennm= window.btoa(eName);
+  var ednn= window.btoa(eDown);
+  var epwd= window.btoa(ePwdd);
+  
+  var hasil= link + ennm + url + ednn + ptw + epwd;
+  var hssl= document.getElementById('hsl').value= hasil;
 }
 </script>
 
