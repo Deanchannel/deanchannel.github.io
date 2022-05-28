@@ -29,7 +29,7 @@ function generate(){
   var asu= CryptoJS.AES.encrypt(name,secretKey);
   var bab= CryptoJS.AES.encrypt(down,secretKey);
   var vxy= CryptoJS.AES.encrypt(vyn,secretKey);
-  var hhss= encodeURI ( asu + '&l=' + bab + '&v=' + vxy);
+  var hhss= asu + '&l=' + bab + '&v=' + vxy;
   var hasil= link + hhss;
   alert(hasil);
   var hasill= document.getElementById('hsl').value=hasil;
