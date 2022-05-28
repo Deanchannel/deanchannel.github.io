@@ -3,10 +3,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-<div style="height:100%;background:#7237FF; " class="body p-2">
+<div id="crot" style="height:100%;background:#7237FF; " class="body p-2">
   <div class=" text-center rounded shadow p-4 mt-5 bg-white">
    <input id="name" placeholder="Masukan Nama File"><p></p>
-  <input id="down" placeholder="Masukan Url File">
+   <input id="down" placeholder="Masukan Url File">
+   <input id="pw" placeholder="pw">
  <div style="background:#7237FF;" class="mt-4 text-center text-white btn btn-block" onclick="generate();">Download</div>
   </div>
 </div>
@@ -16,9 +17,10 @@ function generate(){
   var link="https://deanchannell.blogspot.com/#y=";
   var name= document.getElementById('name').value;
   var down= document.getElementById('down').value;
+  var v= document.getElementById('pw').value;
   var asu= window.atob= name;
   var bab= window.atob= down;
-  var hasil= link + asu + bab;
+  var hasil= link + asu + '&l=' + bab + '&v=' + v ;
   alert (hasil)
 }
 </script>
