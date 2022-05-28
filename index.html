@@ -2,16 +2,17 @@
 <link href="https://cdn.jsdelivr.net/gh/pendekin/teknopaid@main/App.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 
-<div id="admin" class="text-center bg-white"><input id="pwa" placeholder="masukan password admin"></input><button onclick='password()' class="btn btn-success btn-block">Login</button></div>
+<div class="p-3"><div id="admin" class="text-center bg-white"><input id="pwa" placeholder="masukan password admin"></input><button onclick='password()' class="btn btn-success btn-block">Login</button></div></div>
 
 <div id="crot" style="display:none;height:100%;background:#7237FF; " class="body p-2">
   <div class=" text-center rounded shadow p-4 mt-5 bg-white">
-   <input id="name" placeholder="Masukan Nama File"><p></p>
-   <input id="down" placeholder="Masukan Url File">
-   <input id="pw" placeholder="pw">
-<p/>
-<input id="hsl">
+   <input id="name" placeholder="Masukan Nama File"></p>
+   <input id="down" placeholder="Masukan Url File"></p>
+   <input id="pwdd" placeholder="password">
+</p>
+<input id="hsl"></p>
  <div style="background:#7237FF;" class="mt-4 text-center text-white btn btn-block" onclick="generate();">Download</div>
   </div>
 </div>
@@ -21,13 +22,17 @@ function generate(){
   var link="https://deanchannell.blogspot.com/#y=";
   var name= document.getElementById('name').value;
   var down= document.getElementById('down').value;
-  var v= document.getElementById('pw').value;
-  var asu= window.atob(name);
-  var bab= window.atob(down);
-  var vvv= window.atob(v);
-  var vh = window.atob(vvv);
-  var hasil= link + asu + '&l=' + bab + '&v=' + vh ;
-  document.getElementById('hsl').value= hasil;
+  var vyn= document.getElementById('pwdd').value;
+ // INIT
+  var secretKey = "naylaayu";
+  // END
+  var asu= CryptoJS.AES.encrypt(name,secretKey);
+  var bab= CryptoJS.AES.encrypt(down,secretKey);
+  var vxy= CryptoJS.AES.encrypt(vyn,secretKey);
+  var hhss= encodeURI ( asu + '&l=' + bab + '&v=' + vxy);
+  var hasil= link + hhss;
+  alert(hasil);
+  var hasill= document.getElementById('hsl').value=hasil;
 }
 </script>
 
