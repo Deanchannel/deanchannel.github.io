@@ -6,5 +6,5 @@ window.location.href=(links[Math.floor(Math.random()*max)]);
   var link = links[randomNumber];
   window.location = "http://" + link;
  }else{
-window.location= "/";
+window.location= "https://freeblog.my.id";
 }
